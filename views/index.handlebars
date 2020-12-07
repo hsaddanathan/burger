@@ -1,12 +1,12 @@
 <div class="container-fluid">
   <div class="row" id="header">
-    <div class="col-md-12 text-center">
+    <div class="col-md-12 text-md-center">
       <h1>Hamburgarlar's Paradise</h1>
     </div>
   </div>
   <div class="row" id="list">
     <div class="col-md-4">
-      <h2 class="text-center">Hamburgerlar's Wish List</h2>
+      <h2 class="text-md-center">Hamburgerlar's Wish List</h2>
       <ul>
         {{#each burger}}
         {{#unless isEaten}}
@@ -19,7 +19,7 @@
       <img src="/assets/hamburgerlar.png" alt="Hamburgerlar" width="500" height="375">
     </div>
     <div class="col-md-4">
-      <h2 class="text-center">Hamburgerlar's Hall of Fame</h2>
+      <h2 class="text-md-center">Hamburgerlar's Hall of Fame</h2>
       <ul>
         {{#each burger}}
         {{#if isEaten}}
@@ -32,25 +32,37 @@
 
   </div>
   <div class="row" id="footer">
-    <div class="col-md-12 text-center">
-      <h2>Add a Burger</h2>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <h2 class="text-md-center">Add a Burger</h2>
       <form class="create-form">
 
-        <div class="form-group">
-          <label for="burgers">Burger:</label>
-          <input type="text" id="burgers" name="name">
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group text-md-end">
+              <label for="burgers">Burger:</label>
+              <input type="text" id="burgers" name="name">
+            </div>
+            <div class="form-group text-md-end">
+              <label for="isEaten">Devour?</label><br>
+              <input type="radio" name="isEaten" value="1" checked> Devour!<br>
+              <input type="radio" name="isEaten" value="0"> Wait for it!
+            </div>
+          </div>
+          <div class="col-md-6">
+            <button type="submit text-md-start" class="align-middle">Add Burger</button>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="isEaten">Devour?</label><br>
-          <input type="radio" name="isEaten" value="1" checked> Devour!<br>
-          <input type="radio" name="isEaten" value="0"> Wait for it!
-        </div>
 
-        <button type="submit">Add Burger</button>
-      </form>
     </div>
+    <div class="col-md-4"></div>
+
+
+    </form>
   </div>
+</div>
 
 
 
